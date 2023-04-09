@@ -1,7 +1,10 @@
 * {
   font-family: Roboto, sans-serif;
-  overflow-x: hidden;
   box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 header {
@@ -104,6 +107,7 @@ nav ul li:nth-of-type(2) span {
 main {
   margin-top: -30px;
   margin-left: 90px;
+  margin-bottom: 30px;
 }
 main .title {
   display: flex;
