@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+.navbar {
+  display: none;
+}
+
 header {
   margin-top: -10px;
   margin-left: -10px;
@@ -18,11 +22,11 @@ header {
   justify-content: center;
   font-weight: 500;
 }
-header svg {
-  width: 35%;
+header .svg-cont {
+  width: 30%;
   margin-left: 100px;
 }
-header ul {
+header .desktop-nav {
   margin-left: -20px;
   font-size: 14px;
   width: 100%;
@@ -30,14 +34,14 @@ header ul {
   list-style: none;
   justify-content: space-evenly;
 }
-header ul li:nth-child(4) a {
+header .desktop-nav li:nth-child(4) a {
   color: #00c26d;
 }
-header ul li {
+header .desktop-nav li {
   display: flex;
   align-items: center;
 }
-header ul li:nth-child(3)::after {
+header .desktop-nav li:nth-child(3)::after {
   content: "Yeni";
   margin-left: 5px;
   display: flex;
@@ -50,15 +54,15 @@ header ul li:nth-child(3)::after {
   color: white;
   background-color: #00c26d;
 }
-header ul a {
+header .desktop-nav a {
   text-decoration: none;
   color: black;
 }
-header ul a:hover {
+header .desktop-nav a:hover {
   color: #00c26d;
 }
 header button:nth-of-type(1) {
-  width: 155px;
+  width: 9.688rem;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(163, 162, 162, 0.32);
@@ -73,7 +77,7 @@ header button:nth-of-type(1):hover {
   background-color: #f0f0f0;
 }
 header button:nth-of-type(2) {
-  width: 155px;
+  width: 9.688rem;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(163, 162, 162, 0.32);
@@ -153,6 +157,7 @@ main .section-more .cards {
   width: 91%;
   flex-wrap: wrap;
   gap: 25px;
+  z-index: -1;
 }
 main .section-more .cards .card {
   position: relative;
@@ -294,6 +299,242 @@ footer .iskur p {
   margin-left: 10px;
   font-size: 9px;
   color: gray;
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    position: relative;
+    width: 100vw;
+  }
+  header .svg-cont {
+    width: 38%;
+    margin-top: 10px;
+    margin-left: 65px;
+  }
+  header .desktop-nav {
+    display: none;
+  }
+  header button:nth-of-type(1) {
+    width: 90px;
+    height: 35px;
+    margin-left: 90px;
+    margin-top: 10px;
+  }
+  header button:nth-of-type(2) {
+    display: none;
+  }
+  .navbar {
+    display: contents;
+    z-index: 1;
+  }
+  .navbar .nav-container li {
+    list-style: none;
+  }
+  .navbar .nav-container a {
+    text-decoration: none;
+    color: #0e2431;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .navbar .nav-container a:hover {
+    font-weight: bolder;
+  }
+  .nav-container {
+    position: relative;
+    height: 1px;
+    z-index: 1;
+  }
+  .nav-container .checkbox {
+    position: absolute;
+    display: inline;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .nav-container .hamburger-lines {
+    height: 20px;
+    width: 26px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-container .hamburger-lines .line {
+    height: 3px;
+    border-radius: 10px;
+    background: #000000;
+  }
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar .menu-items {
+    margin-top: -10px;
+    padding-top: 120px;
+    background-color: white;
+    height: 105vh;
+    width: 105vw;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px;
+    gap: 10px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  }
+  .navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    margin-left: -50px;
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+  .nav-container input[type=checkbox]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  body nav {
+    margin-left: -26px;
+  }
+  main .title {
+    margin-left: -370px;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+  main .title h1 {
+    font-weight: 500;
+    font-size: 2.375rem;
+  }
+  main .title span {
+    margin-left: 227px;
+  }
+  main .firstblog {
+    margin-left: -75px;
+    width: 360px;
+    height: 450px;
+    flex-direction: column;
+  }
+  main .firstblog img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    width: 360px;
+    height: 250px;
+  }
+  main .firstblog div h2 {
+    font-size: 1.25rem;
+  }
+  main .firstblog div p:nth-of-type(1) {
+    width: 330px;
+  }
+  main .firstblog div span {
+    margin-top: 0;
+    margin-left: 250px;
+  }
+  main .section-more {
+    margin-left: -70px;
+  }
+  main .section-more h3 {
+    font-size: 2rem;
+  }
+  main .section-more .cards .card {
+    width: 360px;
+    height: 450px;
+  }
+  main .section-more .cards .card h4 {
+    font-size: 1.25rem;
+  }
+  main .section-more .cards .card img {
+    width: 335px;
+    margin: 12px;
+  }
+  main .section-more .cards .card span {
+    margin-left: -20px;
+  }
+  footer {
+    height: 1300px;
+  }
+  footer nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer nav ul {
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+  }
+  footer nav .social-media {
+    margin-top: 20px;
+  }
+  footer nav .social-media div {
+    margin-top: 10px;
+  }
+  footer .techlogo {
+    margin-left: 140px;
+  }
+  footer .logo-alttext {
+    margin-left: 110px;
+  }
+  footer .below-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  footer .below-footer .copyright {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer hr {
+    width: 90%;
+  }
+  footer .iskur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .iskur img {
+    margin-left: 80px;
+    width: 50px;
+    height: 50px;
+  }
+  footer .iskur p {
+    margin-left: -75px;
+    width: 360px;
+    line-height: 1.5;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
