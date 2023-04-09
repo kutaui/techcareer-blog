@@ -100,7 +100,7 @@ nav {
   ul {
     display: flex;
     list-style: none;
-    & li:nth-of-type(1) {
+    .gray {
       color: gray;
     }
 
@@ -197,7 +197,6 @@ main {
           margin-top: -20px;
           letter-spacing: 0.15px;
           line-height: 23px;
-
         }
         .date {
           margin-top: 10px;
@@ -207,7 +206,7 @@ main {
           display: inline-block;
           cursor: pointer;
           left: 300px;
-          top: -70px;
+          bottom: 20px;
           color: #00c26d;
 
           &:hover {
@@ -228,5 +227,101 @@ footer {
   margin-bottom: -10px;
   margin-left: -10px;
   background-color: #f6f6f6;
+  font-size: 14px;
+  font-weight: 500;
+nav {
+  display: flex;
+  flex-direction: row;
+  ul {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
 
+
+    span {
+      color: gray;
+      margin-bottom: 10px;
+    }
+
+    li {
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+  .social-media {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+    gap: 10px;
+
+    div {
+      margin-top: -75px;
+      display: flex;
+      gap: 10px;
+    svg{
+
+      cursor: pointer;
+    }
+    }
+  }
+.techlogo {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+  hr {
+    width: 1250px;
+    border-color: rgba(128, 128, 128, 0.15);
+  }
+  .logo-alttext {
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+  .below-footer {
+    margin-left: 90px;
+    margin-top: 20px;
+    display: flex;
+.lang {
+  span {
+    font-size: 15px;
+    &:nth-child(1) {
+      margin-right: 10px;
+    }
+    &:nth-child(3) {
+      color: gray;
+      margin-left: 10px;
+    }
+  }
+}
+    .copyright {
+      font-size: 12px;
+      color: gray;
+      margin-left: 820px;
+    span:nth-child(2){
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    }
+    }
+
+  .iskur {
+    margin-left: 100px;
+  margin-top: 25px;
+    display: flex;
+    img {
+      margin-top: 10px;
+    }
+p {
+  width: 80%;
+  margin-left: 10px;
+  font-size: 9px;
+  color: gray;
+}
+  }
 }

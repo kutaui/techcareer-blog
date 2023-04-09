@@ -95,7 +95,7 @@ nav ul {
   display: flex;
   list-style: none;
 }
-nav ul li:nth-of-type(1) {
+nav ul .gray {
   color: gray;
 }
 nav ul li:nth-of-type(2) span {
@@ -191,7 +191,7 @@ main .section-more .cards .card span {
   display: inline-block;
   cursor: pointer;
   left: 300px;
-  top: -70px;
+  bottom: 20px;
   color: #00c26d;
 }
 main .section-more .cards .card span:hover {
@@ -208,6 +208,92 @@ footer {
   margin-bottom: -10px;
   margin-left: -10px;
   background-color: #f6f6f6;
+  font-size: 14px;
+  font-weight: 500;
+}
+footer nav {
+  display: flex;
+  flex-direction: row;
+}
+footer nav ul {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+footer nav ul span {
+  color: gray;
+  margin-bottom: 10px;
+}
+footer nav ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer .social-media {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  gap: 10px;
+}
+footer .social-media div {
+  margin-top: -75px;
+  display: flex;
+  gap: 10px;
+}
+footer .social-media div svg {
+  cursor: pointer;
+}
+footer .techlogo {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+footer hr {
+  width: 1250px;
+  border-color: rgba(128, 128, 128, 0.15);
+}
+footer .logo-alttext {
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+footer .below-footer {
+  margin-left: 90px;
+  margin-top: 20px;
+  display: flex;
+}
+footer .below-footer .lang span {
+  font-size: 15px;
+}
+footer .below-footer .lang span:nth-child(1) {
+  margin-right: 10px;
+}
+footer .below-footer .lang span:nth-child(3) {
+  color: gray;
+  margin-left: 10px;
+}
+footer .below-footer .copyright {
+  font-size: 12px;
+  color: gray;
+  margin-left: 820px;
+}
+footer .below-footer .copyright span:nth-child(2) {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+footer .iskur {
+  margin-left: 100px;
+  margin-top: 25px;
+  display: flex;
+}
+footer .iskur img {
+  margin-top: 10px;
+}
+footer .iskur p {
+  width: 80%;
+  margin-left: 10px;
+  font-size: 9px;
+  color: gray;
 }
 
 /*# sourceMappingURL=style.css.map */
